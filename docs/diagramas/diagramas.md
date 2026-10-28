@@ -1,13 +1,19 @@
 # Documentação do Banco de Dados
 
 ## 1. DER Conceitual
+
 ```mermaid
 erDiagram
     CATEGORIA ||--o{ LIVRO : possui
     EDITORA ||--o{ LIVRO : publica
     LIVRO ||--o{ EMPRESTIMO : "figura em"
     LEITOR ||--o{ EMPRESTIMO : realiza
-    erDiagram
+```
+
+## 2. Modelo Lógico
+
+```mermaid
+erDiagram
     LEITOR {
         int id_leitor PK
         string nome
@@ -47,4 +53,4 @@ erDiagram
     EDITORA ||--o{ LIVRO : ""
     LIVRO ||--o{ EMPRESTIMO : ""
     LEITOR ||--o{ EMPRESTIMO : ""
-    
+```
