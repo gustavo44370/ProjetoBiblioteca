@@ -17,8 +17,8 @@ erDiagram
     LEITOR {
         int id_leitor PK
         string nome
-        string email UQ
-        string tipo CHECK
+        string email UK
+        string tipo "CHECK"
         date data_cadastro
     }
     EMPRESTIMO {
@@ -27,7 +27,7 @@ erDiagram
         int id_leitor FK
         date data_emprestimo
         date data_prevista_devolucao
-        date data_devolucao NULL
+        date data_devolucao "NULL"
     }
     LIVRO {
         int id_livro PK
@@ -35,17 +35,17 @@ erDiagram
         int id_editora FK
         string titulo
         string autor
-        string isbn UQ
+        string isbn UK
         int ano_edicao
         int qtd_exemplares
     }
     CATEGORIA {
         int id_categoria PK
-        string nome UQ
+        string nome UK
     }
     EDITORA {
         int id_editora PK
-        string nome UQ
+        string nome UK
         string cidade
     }
     
